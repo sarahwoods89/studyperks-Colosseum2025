@@ -1,0 +1,26 @@
+// Simulate wallet connection and StudyPerks token detection
+const DISCOUNT_PERCENTAGE = 15;
+const originalPrice = 99.99;
+
+document.getElementById("connect-wallet").addEventListener("click", () => {
+  document.getElementById("wallet-options").classList.remove("hidden");
+});
+
+document.querySelectorAll(".wallet-option").forEach(button => {
+  button.addEventListener("click", () => {
+    simulateWalletConnect(button.innerText);
+  });
+});
+
+function simulateWalletConnect(walletName) {
+  const discountedPrice = (originalPrice * (1 - DISCOUNT_PERCENTAGE / 100)).toFixed(2);
+
+  document.getElementById("connect-wallet").innerText = `Connected: ${walletName}`;
+  document.getElementById("wallet-options").classList.add("hidden");
+
+  // Apply discount
+  document.getElementById("discounted-price").innerText = `$${discountedPrice}`;
+  document.getElementById("checkout").innerText = `Checkout • $${discountedPrice}`;
+  document.getElementById("discount-badge").classList.remove("hidden");
+  document.getElementById("discount-message").classList.remove("hidden");
+}
