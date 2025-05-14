@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyPerks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>StudyPerks</h1>
+    <button id="connect-wallet">Select Wallet</button>
+
+    <div id="wallet-options" class="hidden">
+      <ul>
+        <li><button class="wallet-option">Phantom</button></li>
+        <li><button class="wallet-option">Solflare</button></li>
+        <li><button class="wallet-option">Backpack</button></li>
+        <li><button class="wallet-option">Glow</button></li>
+      </ul>
+    </div>
+
+    <h2>Gym Membership</h2>
+    <p>Unlimited access to all gym facilities and classes</p>
+
+    <div id="price">
+      <p><s>$99.99</s> <span id="discounted-price">$99.99</span></p>
+      <span id="discount-badge" class="hidden">15% OFF</span>
+      <p id="discount-message" class="hidden">🎉 Student discount applied. You saved $15.00</p>
+    </div>
+
+    <button id="checkout">Checkout • $99.99</button>
+    <p class="footer">Secure checkout powered by StudyPerks</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
